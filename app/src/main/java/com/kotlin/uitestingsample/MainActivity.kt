@@ -1,5 +1,6 @@
 package com.kotlin.uitestingsample
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -11,6 +12,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         image.setOnClickListener {
             app_hello_text.text = edit_text_t.text
+        }
+        button.setOnClickListener{
+            startActivity(Intent(this, SecondActivity::class.java))
         }
     }
 }
