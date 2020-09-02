@@ -32,12 +32,12 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.myapplication", appContext.packageName)
+        assertEquals("com.kotlin.uitestingsample", appContext.packageName)
     }
 
     @Test
     fun verifyText(){
-        onView(withId(R.id.helloWorld)).check(matches(withText("Hello World!")))
+        onView(withId(R.id.app_hello_text)).check(matches(withText("Hello World!")))
     }
 
     @Test
